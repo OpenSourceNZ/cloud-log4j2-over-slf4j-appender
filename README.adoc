@@ -42,5 +42,5 @@ The package is `*nz.net.osnz.common.logging.CloudJsonLayout*` and it is designed
  
  	</Loggers>
  </Configuration>
-
+[/source:xml]
 
