@@ -1,24 +1,24 @@
-= connect-java-logging-log4j2
+# cloud-log4j2-over-slf4j-appender
 
-== Description
-custom logger for log4j2
+## Description
+custom logger for log4j2 over slf4j.
 
 This is a custom logger for log4j2 that obeys the rules laid down by the
-Connect platform for distributed logging. 
+Connect platform for distributed logging.
 
 To use it in your log4j2 configuration, add it in packages you should be scanning,
 ideally identify it specifically by its classname so it does not scan at all.
 
-The package is `*nz.net.osnz.common.logging.CloudJsonLayout*` and it is designed to log to `*stdout*`
+The package is *`nz.net.osnz.common.logging.CloudJsonLayout`* and it is designed to log to *`stdout`*
  as all distributed loggers are, including Google Cloud Stackdriver.
 
-[source:xml]
---
+```xml
+
 <Configuration monitorInterval="30" verbose="true">
 
   <Appenders>
     <Console name="Console" target="SYSTEM_OUT">
-      <CloudJsonLayout></CloudJsonLayout>
+      <CloudJsonLayout />
     </Console>
   </Appenders>
 
@@ -43,5 +43,7 @@ The package is `*nz.net.osnz.common.logging.CloudJsonLayout*` and it is designed
 
   </Loggers>
 </Configuration>
---
+
+```
+
 

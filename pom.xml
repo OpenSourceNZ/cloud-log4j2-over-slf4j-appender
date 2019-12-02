@@ -10,20 +10,20 @@
   </parent>
 
   <groupId>nz.net.osnz.common</groupId>
-  <artifactId>cloud-log4j2-slf4j-appender</artifactId>
+  <artifactId>cloud-log4j2-over-slf4j-appender</artifactId>
   <version>1.1-SNAPSHOT</version>
-  <name>cloud-log4j2-slf4j-appender</name>
+  <name>cloud-log4j2-over-slf4j-appender</name>
 
   <description>
-    cloud-log4j2-slf4j-appender - implements a logging pattern on log4j2 for Google Cloud Stackdriver
+    cloud-log4j2-over-slf4j-appender - implements a logging pattern on log4j2 for Cloud
   </description>
 
-  <url>https://github.com/OpenSourceNZ/cloud-log4j2-slf4j-appender</url>
+  <url>https://github.com/OpenSourceNZ/cloud-log4j2-over-slf4j-appender</url>
 
   <scm>
-    <connection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-slf4j-appender.git</connection>
-    <developerConnection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-slf4j-appender.git</developerConnection>
-    <url>git@github.com:OpenSourceNZ/cloud-log4j2-slf4j-appender.git</url>
+    <connection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-over-slf4j-appender.git</connection>
+    <developerConnection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-over-slf4j-appender.git</developerConnection>
+    <url>git@github.com:OpenSourceNZ/cloud-log4j2-over-slf4j-appender.git</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -32,12 +32,6 @@
       <groupId>nz.net.osnz.composite</groupId>
       <artifactId>composite-logging-log4j2</artifactId>
       <version>[1.4,2)</version>
-      <exclusions>
-        <exclusion>
-          <groupId>cd.connect.common</groupId>
-          <artifactId>*</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>nz.net.osnz.common</groupId>
@@ -53,7 +47,19 @@
     <dependency>
       <groupId>nz.net.osnz.composite</groupId>
       <artifactId>composite-spock-test</artifactId>
-      <version>[1.2,2)</version>
+      <version>[1.2]</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>nz.net.osnz.composite</groupId>
+      <artifactId>composite-unit-test</artifactId>
+      <version>[6.2]</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>nz.net.osnz.composite</groupId>
+      <artifactId>composite-groovy</artifactId>
+      <version>[6.2]</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -68,8 +74,8 @@
         <configuration>
           <filtering>false</filtering>
           <tiles>
-            <tile>io.osnz.tiles:tile-groovy:[1,2)</tile>
-            <tile>io.osnz.tiles:tile-spock-test:[1,2)</tile>
+            <tile>io.osnz.tiles:tile-java-core:[1,2)</tile>
+            <tile>io.osnz.tiles:tile-groovy-test:[1,2)</tile>
           </tiles>
         </configuration>
       </plugin>

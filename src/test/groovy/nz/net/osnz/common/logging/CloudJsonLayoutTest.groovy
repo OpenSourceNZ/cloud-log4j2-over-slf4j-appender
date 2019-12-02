@@ -10,16 +10,18 @@ import spock.lang.Specification
 /**
  * @author Kefeng Deng (https://bit.ly/2JFoCO1)
  */
-class CloudJsonLayoutTests extends Specification {
+public class CloudJsonLayoutTest extends Specification {
 
-  def "test the layout"() {
-    given: "i have an instance"
+
+  def 'test the layout'() {
+
+    given: 'i have an instance'
       def layout = new CloudJsonLayout()
 
-    when: "i replace the enhancers"
+    when: 'i replace the enhancers'
       layout.loggingProcessors = []
 
-    and: "create a fake log event"
+    and: 'create a fake log event'
       def event = [
         getTimeMillis : { -> System.currentTimeMillis() },
         getContextData: { ->
