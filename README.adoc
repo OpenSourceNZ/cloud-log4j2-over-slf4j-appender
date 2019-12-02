@@ -13,35 +13,35 @@ The package is `*nz.net.osnz.common.logging.CloudJsonLayout*` and it is designed
  as all distributed loggers are, including Google Cloud Stackdriver.
 
 [source:xml]
-----
- <Configuration monitorInterval="30" verbose="true">
+--
+<Configuration monitorInterval="30" verbose="true">
 
- 	<Appenders>
- 		<Console name="Console" target="SYSTEM_OUT">
- 			<CloudJsonLayout></CloudJsonLayout>
- 		</Console>
- 	</Appenders>
- 
- 	<Loggers>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <CloudJsonLayout></CloudJsonLayout>
+    </Console>
+  </Appenders>
+
+  <Loggers>
     <AsyncLogger name="io.osnz" level="debug" />
-    
- 		<!-- Reduce noise -->
- 		<AsyncLogger name="com.amazonaws" level="warn"/>
- 		<AsyncLogger name="org.springframework" level="info"/>
- 		<AsyncLogger name="org.springframework.beans.factory" level="warn"/>
- 		<AsyncLogger name="org.apache" level="warn"/>
- 		<AsyncLogger name="org.hibernate" level="warn"/>
- 		<AsyncLogger name="org.glassfish" level="warn"/>
- 		<AsyncLogger name="org.jboss" level="warn"/>
- 
- 		<!-- this controls whether each HTTP request is logged (very verbose) -->
- 		<AsyncLogger name="jersey-logging" level="trace"/>
- 
- 		<AsyncRoot level="info">
- 			<AppenderRef ref="Console"/>
- 		</AsyncRoot>
- 
- 	</Loggers>
- </Configuration>
-----
+
+    <!-- Reduce noise -->
+    <AsyncLogger name="com.amazonaws" level="warn"/>
+    <AsyncLogger name="org.springframework" level="info"/>
+    <AsyncLogger name="org.springframework.beans.factory" level="warn"/>
+    <AsyncLogger name="org.apache" level="warn"/>
+    <AsyncLogger name="org.hibernate" level="warn"/>
+    <AsyncLogger name="org.glassfish" level="warn"/>
+    <AsyncLogger name="org.jboss" level="warn"/>
+
+    <!-- this controls whether each HTTP request is logged (very verbose) -->
+    <AsyncLogger name="jersey-logging" level="trace"/>
+
+    <AsyncRoot level="info">
+      <AppenderRef ref="Console"/>
+    </AsyncRoot>
+
+  </Loggers>
+</Configuration>
+--
 
