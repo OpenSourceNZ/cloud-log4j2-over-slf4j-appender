@@ -10,7 +10,7 @@
 
   <groupId>nz.net.osnz.common</groupId>
   <artifactId>cloud-log4j2-over-slf4j-appender</artifactId>
-  <version>1.1</version>
+  <version>1.2-SNAPSHOT</version>
   <name>cloud-log4j2-over-slf4j-appender</name>
 
   <description>
@@ -23,7 +23,7 @@
     <connection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-over-slf4j-appender.git</connection>
     <developerConnection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-over-slf4j-appender.git</developerConnection>
     <url>git@github.com:OpenSourceNZ/cloud-log4j2-over-slf4j-appender.git</url>
-    <tag>cloud-log4j2-over-slf4j-appender-1.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
