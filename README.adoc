@@ -13,8 +13,9 @@ The package is `*nz.net.osnz.common.logging.CloudJsonLayout*` and it is designed
  as all distributed loggers are, including Google Cloud Stackdriver.
 
 [source:xml]
+----
  <Configuration monitorInterval="30" verbose="true">
- 
+
  	<Appenders>
  		<Console name="Console" target="SYSTEM_OUT">
  			<CloudJsonLayout></CloudJsonLayout>
@@ -42,5 +43,5 @@ The package is `*nz.net.osnz.common.logging.CloudJsonLayout*` and it is designed
  
  	</Loggers>
  </Configuration>
-[/source:xml]
+----
 
