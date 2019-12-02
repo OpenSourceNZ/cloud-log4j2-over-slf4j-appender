@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>nz.net.osnz.parent</groupId>
+    <artifactId>java-parent</artifactId>
+    <version>6.2</version>
+  </parent>
+
+  <groupId>nz.net.osnz.common</groupId>
+  <artifactId>cloud-log4j2-slf4j-appender</artifactId>
+  <version>1.1-SNAPSHOT</version>
+  <name>cloud-log4j2-slf4j-appender</name>
+
+  <description>
+    cloud-log4j2-slf4j-appender - implements a logging pattern on log4j2 for Google Cloud Stackdriver
+  </description>
+
+  <url>https://github.com/OpenSourceNZ/cloud-log4j2-slf4j-appender</url>
+
+  <scm>
+    <connection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-slf4j-appender.git</connection>
+    <developerConnection>scm:git:git@github.com:OpenSourceNZ/cloud-log4j2-slf4j-appender.git</developerConnection>
+    <url>git@github.com:OpenSourceNZ/cloud-log4j2-slf4j-appender.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>nz.net.osnz.composite</groupId>
+      <artifactId>composite-logging-log4j2</artifactId>
+      <version>[1.4,2)</version>
+      <exclusions>
+        <exclusion>
+          <groupId>cd.connect.common</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>nz.net.osnz.common</groupId>
+      <artifactId>common-jackson</artifactId>
+      <version>[2.2]</version>
+    </dependency>
+    <dependency>
+      <groupId>nz.net.osnz.composite</groupId>
+      <artifactId>composite-jackson</artifactId>
+      <version>[2.13]</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>nz.net.osnz.composite</groupId>
+      <artifactId>composite-spock-test</artifactId>
+      <version>[1.2,2)</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>io.repaint.maven</groupId>
+        <artifactId>tiles-maven-plugin</artifactId>
+        <version>2.15</version>
+        <extensions>true</extensions>
+        <configuration>
+          <filtering>false</filtering>
+          <tiles>
+            <tile>io.osnz.tiles:tile-groovy:[1,2)</tile>
+            <tile>io.osnz.tiles:tile-spock-test:[1,2)</tile>
+          </tiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
